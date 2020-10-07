@@ -7,3 +7,12 @@ D:\2do SEMESTRE PROGRAMACION\Laboratorio II\EJERCICIOS\HerenciaDesafio\HerenciaD
 D:\2do SEMESTRE PROGRAMACION\Laboratorio II\EJERCICIOS\HerenciaDesafio\HerenciaDesafio\obj\Debug\HerenciaDesafio.csproj.GenerateResource.Cache
 D:\2do SEMESTRE PROGRAMACION\Laboratorio II\EJERCICIOS\HerenciaDesafio\HerenciaDesafio\obj\Debug\HerenciaDesafio.exe
 D:\2do SEMESTRE PROGRAMACION\Laboratorio II\EJERCICIOS\HerenciaDesafio\HerenciaDesafio\obj\Debug\HerenciaDesafio.pdb
+D:\2do SEMESTRE PROGRAMACION\Laboratorio II\Desafios\HerenciaDesafio\HerenciaDesafio\bin\Debug\HerenciaDesafio.exe.config
+D:\2do SEMESTRE PROGRAMACION\Laboratorio II\Desafios\HerenciaDesafio\HerenciaDesafio\bin\Debug\HerenciaDesafio.exe
+D:\2do SEMESTRE PROGRAMACION\Laboratorio II\Desafios\HerenciaDesafio\HerenciaDesafio\bin\Debug\HerenciaDesafio.pdb
+D:\2do SEMESTRE PROGRAMACION\Laboratorio II\Desafios\HerenciaDesafio\HerenciaDesafio\obj\Debug\HerenciaDesafio.csprojResolveAssemblyReference.cache
+D:\2do SEMESTRE PROGRAMACION\Laboratorio II\Desafios\HerenciaDesafio\HerenciaDesafio\obj\Debug\HerenciaDesafio.Form1.resources
+D:\2do SEMESTRE PROGRAMACION\Laboratorio II\Desafios\HerenciaDesafio\HerenciaDesafio\obj\Debug\HerenciaDesafio.Properties.Resources.resources
+D:\2do SEMESTRE PROGRAMACION\Laboratorio II\Desafios\HerenciaDesafio\HerenciaDesafio\obj\Debug\HerenciaDesafio.csproj.GenerateResource.Cache
+D:\2do SEMESTRE PROGRAMACION\Laboratorio II\Desafios\HerenciaDesafio\HerenciaDesafio\obj\Debug\HerenciaDesafio.exe
+D:\2do SEMESTRE PROGRAMACION\Laboratorio II\Desafios\HerenciaDesafio\HerenciaDesafio\obj\Debug\HerenciaDesafio.pdb

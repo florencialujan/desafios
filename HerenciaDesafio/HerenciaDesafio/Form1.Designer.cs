@@ -186,6 +186,7 @@
             this.sPiso.TabIndex = 11;
             this.sPiso.Text = "Piso";
             this.sPiso.UseVisualStyleBackColor = true;
+            this.sPiso.CheckedChanged += new System.EventHandler(this.sPiso_CheckedChanged);
             // 
             // sLocal
             // 
@@ -218,7 +219,6 @@
             this.nPiso.Size = new System.Drawing.Size(40, 20);
             this.nPiso.TabIndex = 14;
             this.nPiso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nPiso.TextChanged += new System.EventHandler(this.nPiso_TextChanged);
             this.nPiso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.compruebaSoloNumeros);
             // 
             // label8
@@ -240,7 +240,6 @@
             this.cantVentanas.Size = new System.Drawing.Size(40, 20);
             this.cantVentanas.TabIndex = 16;
             this.cantVentanas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.cantVentanas.TextChanged += new System.EventHandler(this.cantVentanas_TextChanged);
             this.cantVentanas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.compruebaSoloNumeros);
             // 
             // groupBox1
