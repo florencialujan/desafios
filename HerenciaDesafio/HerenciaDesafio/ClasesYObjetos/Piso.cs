@@ -8,8 +8,9 @@ namespace HerenciaDesafio.ClasesYObjetos
 {
     class Piso : Inmueble
     {
-        protected int nroPiso;
-        protected double precioCalculado;
+        private int nroPiso;
+        private double precioCalculado;
+
         public Piso(string direccion, bool esNuevo, int m2, int pBase, int nroPiso)
         {
             this.direccion = direccion;
@@ -20,24 +21,23 @@ namespace HerenciaDesafio.ClasesYObjetos
 
         }
 
-        public override double calcularPrecio()
+        public double PrecioCalculado { get => precioCalculado; set => precioCalculado = value; }
+        public int NroPiso { get => nroPiso; set => nroPiso = value; }
+
+        public double calcularPrecio()
         {
-            //base.calcularPrecio();
+            
             precioCalculado = pBase;
 
             if (esNuevo == true)
             {
-                precioCalculado = precioCalculado + pBase * 0.01;
+                precioCalculado = precioCalculado - pBase * 0.01;
             }
             else
             {
-                precioCalculado = precioCalculado + pBase * 0.02;
+                precioCalculado = precioCalculado - pBase * 0.02;
             }
 
-            if (m2 > 50)
-            {
-                precioCalculado = precioCalculado + pBase * 0.01;
-            }
 
             if (nroPiso >= 3)
             {

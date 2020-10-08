@@ -9,8 +9,8 @@ namespace HerenciaDesafio.ClasesYObjetos
     class Local : Inmueble
 
     {
-        protected int cantVentanas;
-        protected double precioCalculado;
+        private int cantVentanas;
+        private double precioCalculado;
 
         public Local(string direccion,bool esNuevo, int m2, int pBase, int cantVentanas)
         {
@@ -22,18 +22,21 @@ namespace HerenciaDesafio.ClasesYObjetos
 
         }
 
-        public override double calcularPrecio()
+        public double PrecioCalculado { get => precioCalculado; set => precioCalculado = value; }
+        public int CantVentanas { get => cantVentanas; set => cantVentanas = value; }
+
+        public double calcularPrecio()
         {
-            //base.calcularPrecio();
+            
             precioCalculado = pBase;
 
             if(esNuevo == true)
             {
-                precioCalculado = precioCalculado + pBase*0.01;
+                precioCalculado = precioCalculado - pBase*0.01;
             }
             else
             {
-                precioCalculado = precioCalculado + pBase*0.02;
+                precioCalculado = precioCalculado - pBase*0.02;
             }
 
             if (m2 > 50)

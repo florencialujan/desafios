@@ -24,6 +24,7 @@ namespace HerenciaDesafio
         private void sPiso_CheckedChanged(object sender, EventArgs e)
         {
             cantVentanas.Enabled = false;
+            cantVentanas.Text = ""; // JESUS
             nPiso.Enabled = true;
         }
 
@@ -31,13 +32,14 @@ namespace HerenciaDesafio
         {
             cantVentanas.Enabled = true;
             nPiso.Enabled = false;
+            nPiso.Text = ""; // JESUS
         }
 
     
         /*  -----------------------------------------------------------------------------
          La funcion ActivarCalcular lo que hace es evaluar si los TextBox estén llenos o vacios para que si 
          los TextBox esten vacios, no nos deje apretar el BotonCalcular, y si estan llenos si nos deje apretar el boton*/
-        private bool ActivarCalcular()
+        /*private bool ActivarCalcular()
         {
             if (direccion.Text != ("") && m2.Text != ("") && precioBase.Text != ("") && (cantVentanas.Text != ("") || nPiso.Text != ("")))
             {
@@ -47,12 +49,13 @@ namespace HerenciaDesafio
             {
                 return false;
             }
-        }
+        }*/
         /*---------------------------------------------------------------------  
          En los siguientes metodos x_TextChanged lo que hacemos es evaluar que cuando se entre un valor
          se compruebe si los demas valores tambien están cargados para que se habilite BotonCalcular */
 
-        private void direccion_TextChanged(object sender, EventArgs e)
+            // JESUS: Demasiado código para sólo activar o desactivar un botón. Mejor lo eliminamos.
+        /*private void direccion_TextChanged(object sender, EventArgs e)
         {
             BotonCalcular.Enabled = ActivarCalcular();
         }
@@ -75,7 +78,7 @@ namespace HerenciaDesafio
         private void cantVentanas_TextChanged(object sender, EventArgs e)
         {
             BotonCalcular.Enabled = ActivarCalcular();
-        }
+        }*/
 
 
         /*-------------------------------------------------------------------------------------
@@ -103,32 +106,39 @@ namespace HerenciaDesafio
           la clase y el método correspondiente :D  -----------------------------------------------*/
         private void BotonCalcular_Click(object sender, EventArgs e)
         {
-            bool estado = true;
-            double precio;
-            if (nuevo.Checked)
+            if (direccion.Text != ("") && m2.Text != ("") && precioBase.Text != ("") && (cantVentanas.Text != ("") || nPiso.Text != ("")))
             {
-                estado = true;
-            }
-            if (usado.Checked)
-            {
-                estado = false;
-            }
+                bool estado = true;
+                double precio;
+                if (nuevo.Checked)
+                {
+                    estado = true;
+                }
+                if (usado.Checked)
+                {
+                    estado = false;
+                }
 
-            if (sPiso.Checked == true)
-            {
-                Piso p1 = new Piso(direccion.Text, estado, Convert.ToInt32(m2.Text), Convert.ToInt32(precioBase.Text), Convert.ToInt32(nPiso.Text));
-                precio = p1.calcularPrecio();
-                pCalculado.Text = ("$" + precio);
-            }
-            else
-            {
-                Local l1 = new Local(direccion.Text, estado, Convert.ToInt32(m2.Text), Convert.ToInt32(precioBase), Convert.ToInt32(cantVentanas.Text));
-                precio = l1.calcularPrecio();
-                pCalculado.Text = ("$" + precio);
-                
-            }
+                if (sPiso.Checked == true)
+                {
+                    Piso p1 = new Piso(direccion.Text, estado, Convert.ToInt32(m2.Text), Convert.ToInt32(precioBase.Text), Convert.ToInt32(nPiso.Text));
+                    precio = p1.calcularPrecio();
+                    pCalculado.Text = ("$" + precio);
+                }
+                else
+                {
+                    Local l1 = new Local(direccion.Text, estado, Convert.ToInt32(m2.Text), Convert.ToInt32(precioBase.Text), Convert.ToInt32(cantVentanas.Text));
+                    precio = l1.calcularPrecio();
+                    pCalculado.Text = ("$" + precio);
 
-            
+                }
+
+            }else
+            {
+                MessageBox.Show("Error: por favor complete todos los campos necesarios para realizar el cálculo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+        
     }
 }
